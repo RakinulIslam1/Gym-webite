@@ -37,23 +37,26 @@ const loadCards = (cardList) =>{
         const div =document.createElement('div');
         console.log(allCards);
         div.innerHTML = `
-        <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 m-auto">
+        <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 m-auto mb-7">
                 <figure><img src="${allCards.thumbnail_url}" alt="Album"></figure>
                 <div class="card-body">
                     <h2 class="card-title text-2xl">${allCards.title}</h2>
-                    <p>${allCards.details.slice(0, 200)}...</p>
+                    <p>${allCards.details.slice(0, 200)}...see more</p>
               
-                    <div>
-                      <div>
-                        <img class="img" src="${allCards.author.img}"  alt="">
+                    <div class="display">
+                      
+                        <img class="img" src="${allCards.author.img}" alt="">
 
-                        <p>${allCards.author ? allCards.author.name : 'no name  found'} <br> ${allCards.author.published_date}</p>
+                        <p>${allCards.author.name ? allCards.author.name : 'no name found'} <br> ${allCards.author.published_date ? allCards.author.published_date : 'no publish date found'}</p>
                         <p></p>
-                      </div>
 
-                      <div class="display">
-                        <p><i class="fa-solid fa-eye"></i> ${allCards.total_view} </p>
-                      </div>
+                      
+                        <div class="view">
+                            <p><i class="fa-solid fa-eye"></i> ${allCards.total_view ? allCards.total_view : 'no views' } 
+                            </p>                        
+                            
+                        </div>
+                        <i class="fa-solid fa-arrow-right mt-5"></i>
                     </div>
 
                 </div>

@@ -46,9 +46,9 @@ const loadCards = (cardList) => {
 
          <div>
             <div>
-                <img class="img" src="${allCards.author.img}"  alt="">
+                <img class="img " src="${allCards.author.img}"  alt="">
 
-                <p>${allCards.author ? allCards.author.name : 'no name  found'} <br> ${allCards.author.published_date}</p>
+                <p>${allCards.author ? allCards.author.name : 'no name  found'} <br> ${allCards.author.published_date ? allCards.author.published_date : 'no published date found'}</p>
                  <p></p>
                 </div>
 
