@@ -39,32 +39,34 @@ const loadCards = (cardList) =>{
         div.innerHTML = `
         <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 m-auto mb-7">
                 <figure><img src="${allCards.thumbnail_url}" alt="Album"></figure>
-                <div class="card-body">
+                <div class="card-body text-white">
                     <h2 class="card-title text-2xl">${allCards.title}</h2>
-                    <p>${allCards.details.slice(0, 200)}...see more</p>
-              
-                    <div class="display">
-                      
+                    <p>${allCards.details.slice(0, 200)}...see more</p>            
+                    <div class="display">             
                         <img class="img" src="${allCards.author.img}" alt="">
-
                         <p>${allCards.author.name ? allCards.author.name : 'no name found'} <br> ${allCards.author.published_date ? allCards.author.published_date : 'no publish date found'}</p>
                         <p></p>
-
-                      
                         <div class="view">
                             <p><i class="fa-solid fa-eye"></i> ${allCards.total_view ? allCards.total_view : 'no views' } 
-                            </p>                        
-                            
+                            </p>                                     
                         </div>
                         <i class="fa-solid fa-arrow-right mt-5"></i>
                     </div>
-
+                    <label onclick="openModal()" for="my-modal-3" class="btn modal-button text-white">Show detais</label>
                 </div>
+                
             </div> 
         `  
         allNewsCards.appendChild(div);
     });
-
 }
+
+    const openModal = ()=>{
+        console.log('done');
+        
+        
+    }
+
+
 
 loadNews();
