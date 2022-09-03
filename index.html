@@ -16,23 +16,21 @@
         <nav>
             <div class="navbar bg-base-100">
                 <div class="flex-1">
-                    <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
-                    <button class="btn btn-primary">News</button>
-                    <p class="text-2xl mx-3">website</p>
+                    <button class="btn btn-primary font-bold">News</button>
+                    <p class="text-2xl mx-3 font-semibold">website</p>
                 </div>
                 <div class="flex-none gap-2">
             
                     <div class="form-control mx-5">
-                        <p class="text-2xl">News</p>
+                        <p class="text-2xl font-semibold">News</p>
                     </div>
                     <div>
-                        <p class="text-2xl mx-5">Blog</p>
+                        <p class="text-2xl mx-5 font-semibold">Blog</p>
                     </div>
             
                     <div class="dropdown dropdown-end">
                         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                             <div class="w-20 rounded-full">
-                                <!-- <img src="https://placeimg.com/80/80/people" /> -->
                                 <img src="./round.png" />
                             </div>
                         </label>
@@ -43,25 +41,30 @@
         <hr class="mt-3">
 
         <div class="text-center mt-3">
-            <ul class="menu menu-horizontal bg-base-100 rounded-box gap-x-9 text-xl">
-                <li><a>Item 1</a></li>
-                <li><a>Item 2</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
-                <li><a>Item 3</a></li>
+            <ul id="news-list" class="menu menu-horizontal bg-base-100 rounded-box gap-x-8 text-xl font-semibold">
             </ul>
         </div>
 
+        <div class="text-3xl text-center mt-4 border p-4 w-3/5 m-auto rounded-lg text-black bg-white">
+            <h1 class=" hidden">not found</h1>
+        </div>
     </header>
 <!-- Header part end -->
 
 <!-- main part start -->
-    <main>
-
+    <main class="mt-10 ">
+        <section>
+            <div id="news-card" class="card lg:card-side bg-base-100 shadow-xl w-2/3 m-auto">
+                <figure><img src="https://placeimg.com/400/400/arch" alt="Album"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">New album is released!</h2>
+                    <p>Click the button to listen on Spotiwhy app.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Listen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
