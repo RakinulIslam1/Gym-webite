@@ -12,31 +12,22 @@ const loadData = news =>{
         // console.log(allNews);
         const li = document.createElement('li');
         li.innerHTML = `
-                <li onclick="newsCard('${allNews.category_id}')">${allNews.category_name}</li>
+                <li onclick="newsCard('${allNews.category_id}')">
+                ${allNews.category_name}</li>
         `
         allNewsCategories.appendChild(li);
 
-    });
-    
+    });    
 }
-
-
-
 const newsCard = (id) =>{
     // console.log(id);
 
-    // const url = `https://openapi.programming-hero.com/api/news/category/01`
-
-    // const url = `https://openapi.programming-hero.com/api/news/${id}`
-
-const url = `https://openapi.programming-hero.com/api/news/category/${id}`
+  const url = `https://openapi.programming-hero.com/api/news/category/${id}`
 // console.log(url);
 
     fetch(url)
     .then(res => res.json())
         .then(data => loadCards(data.data))
-  
-    
 }
 const loadCards = (cardList) =>{
     // console.log(cardList);
@@ -49,21 +40,26 @@ const loadCards = (cardList) =>{
                 <figure><img src="${allCards.thumbnail_url}" alt="Album"></figure>
                 <div class="card-body">
                     <h2 class="card-title text-2xl">${allCards.title}</h2>
-                    <p>${allCards.details.slice(0, 600)}...</p>
-                    
+                    <p>${allCards.details.slice(0, 200)}...</p>
+              
+                    <div>
+                      <div>
+                        <img class="img" src="${allCards.author.img}"  alt="">
+
+                        <p>${allCards.author ? allCards.author.name : 'no name  found'} <br> ${allCards.author.published_date}</p>
+                        <p></p>
+                      </div>
+
+                      <div class="display">
+                        <p><i class="fa-solid fa-eye"></i> ${allCards.total_view} </p>
+                      </div>
+                    </div>
+
                 </div>
-            </div>
-        
-        `
-        
+            </div> 
+        `  
     });
 
-
-    
 }
-
-
-
-
 
 loadNews();
