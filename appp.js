@@ -32,10 +32,11 @@ const newsCard = (id) => {
 const loadCards = (cardList) => {
     // console.log(cardList);
     const allNewsCards = document.getElementById('news-card');
+    allNewsCards.textContent = '';
     cardList.forEach(allCards => {
-
+        const div = document.createElement('div');
         console.log(allCards);
-        allNewsCards.innerHTML = `
+        div.innerHTML = `
      <div class="card card-compact w-96 bg-base-100 shadow-xl">
          <figure><img src="${allCards.thumbnail_url}" alt="" /></figure>
          <div class="card-body">
@@ -58,6 +59,7 @@ const loadCards = (cardList) => {
       </div>
    </div>
         `
+        allNewsCards.appendChild(div);
     });
 
 }
