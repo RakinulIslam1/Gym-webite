@@ -11,6 +11,7 @@
 
 <script src="https://kit.fontawesome.com/d7971ea1c4.js" crossorigin="anonymous"></script>
 
+<!-- CSS styles -->
 <style>
     .img{
         margin-top: 3px;
@@ -28,7 +29,6 @@
     margin-top: 20px;
     margin-right: 200px;
    }
-   
 </style>
 
 </head>
@@ -47,7 +47,8 @@
                         <p class="text-2xl font-semibold">News</p>
                     </div>
                     <div>
-                        <p class="text-2xl mx-5 font-semibold">Blog</p>
+                        <!-- <p class="text-2xl mx-5 font-semibold">Blog</p> -->
+                        <a class="text-2xl mx-5 font-semibold text-primary" target="_blank" href="./index2.html">Blog</a>
                     </div>
             
                     <div class="dropdown dropdown-end">
@@ -66,9 +67,13 @@
             <ul id="news-list" class="menu menu-horizontal bg-base-100 rounded-box gap-x-8 text-xl font-semibold">
             </ul>
         </div>
+<!-- spinner -->
+        <div>
+            <progress id="spinner" class="progress w-full bg-white hidden"></progress>
+        </div>
 
-        <div class="text-3xl text-center mt-4 border p-4 w-3/5 m-auto rounded-lg text-black bg-white">
-            <h1 class=" hidden">not found</h1>
+        <div  class="text-3xl text-center mt-4  rounded-lg text-black bg-white">
+            <h1 id="no-news-message" class=" hidden border p-4 w-1/2 m-auto font-bold text-red-600	">No categories found</h1>
         </div>
     </header>
 <!-- Header part end -->
@@ -79,15 +84,8 @@
 
         </section>
 
-        <section>
-            <!-- <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box relative">
-                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
-                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                </div>
-            </div> -->
+        <section id="modal-body">
+          
         </section>
 
     </main>

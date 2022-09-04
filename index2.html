@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center p-6">
+    <header>
+        <h1 class=" text-5xl font-bold text-white mb-20 underline underline-offset-8">Question and answer blog section</h1>
+    </header>
+    <main>
+        <section class="border-solid border-2 border-sky-500 rounded-lg px-20 py-10 mx-10 mb-5">
+            <h1 class="text-3xl mb-3 font-semibold text-white">Question 1: What's the difference between var, let and const</h1>
+            <p class="text-xl">
+                <span class="text-white font-semibold">Answer:</span> The var is the oldest keyword to declare a variable in JavaScript.let is block-scoped. var is function scoped. let does
+                not allow to redeclare variables. var allows to redeclare.
+                const` is a signal that the identifier won't be reassigned and `let` is a signal that the variable may be reassigned,
+                such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the
+                block it's defined in, which is not always the entire containing function. variables.
+                var can be declared without initialization.
+                let can be declared without initialization.
+                const cannot be declared without initialization.
+            </p>
+        </section>
+
+        <section class="border-solid border-2 border-sky-500 rounded-lg px-20 py-10 mx-10 mb-5">
+            <h1 class="text-3xl mb-3 font-semibold text-white">Question 2: difference between Arrow function in regular function</h1>
+            <p class="text-xl">
+                <span class="text-white font-semibold">Answer:</span> Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function
+                remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest
+                non-arrow parent function..
+            </p>
+        </section>
+
+        <section class="border-solid border-2 border-sky-500 rounded-lg px-20 py-10 mx-10 mb-5">
+            <h1 class="text-3xl mb-3 font-semibold text-white">Question 3: difference between .forEach(), .map(), .filter(), .find()</h1>
+            <p class="text-xl">
+                <span class="text-white font-semibold">Answer:</span> forEach(), is used to execute the same code on every element in an array but does not change the array and it returns
+                undefined.
+                .map() executes the same code on every element in an array and returns a new array with the updated elements.
+                .map() executes the same code on every element in an array and returns a new array with the updated elements.
+                .find() returns the value of the first element that passes a test. The method executes a function for each array element.It returns undefined if no elements are found and does not execute the
+                function for empty elements.
+            </p>
+        </section>
+
+
+    </main>
+</body>
+</html>
